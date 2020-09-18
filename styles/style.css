@@ -294,7 +294,7 @@ body {
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 530px) {
     .banner__head {
         font-size: 45px;
     }
