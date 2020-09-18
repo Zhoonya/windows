@@ -1,70 +1,39 @@
 "use strict";
 
+//CALCULATOR TYPES
 
 const select = document.querySelector('.calculator__select');
-const select_title = select.querySelector('.calculator__select-title');
-const select_labels = select.querySelectorAll('.calculator__select-label');
-const select_inputs = select.querySelectorAll('.calculator__select-input');
-const select_content = select.querySelector('.calculator__select-content');
+const selectTitle = select.querySelector('.calculator__select-title');
+const selectLabels = select.querySelectorAll('.calculator__select-label');
+const selectInputs = select.querySelectorAll('.calculator__select-input');
+const selectContent = select.querySelector('.calculator__select-content');
 
-select_inputs.forEach((input) => {
+selectInputs.forEach((input) => {
     if (input.checked) {
-        select_title.textContent = input.value;
+        selectTitle.textContent = input.value;
     }
 });
 
-select_title.addEventListener('click', () => {
-    const isVisuallyHidden = select_content.classList.contains("visually-hidden");
+selectTitle.addEventListener('click', () => {
+    const isVisuallyHidden = selectContent.classList.contains("visually-hidden");
     if (isVisuallyHidden) {
-        select_content.classList.remove("visually-hidden");
+        selectContent.classList.remove("visually-hidden");
         select.setAttribute('data-state', 'active');
     } else {
-        select_content.classList.add("visually-hidden");
+        selectContent.classList.add("visually-hidden");
         select.setAttribute('data-state', '');
     }
 });
 
-for (let i = 0; i < select_labels.length; i++) {
-    select_labels[i].addEventListener('click', (e) => {
-        select_title.textContent = e.target.textContent;
-        select_content.classList.add("visually-hidden");
+for (let i = 0; i < selectLabels.length; i++) {
+    selectLabels[i].addEventListener('click', (e) => {
+        selectTitle.textContent = e.target.textContent;
+        selectContent.classList.add("visually-hidden");
         select.setAttribute('data-state', '');
     });
 }
 
-// const selectSections = document.querySelector('.calculator__select--sections');
-// const selectTitleSections = selectSections.querySelector('.calculator__select-title--sections');
-// const selectLabelsSections = selectSections.querySelectorAll('.calculator__select-label--sections');
-// const selectInputsSections = selectSections.querySelectorAll('.calculator__select-input--sections');
-// const selectContentSections = selectSections.querySelector('.calculator__select-content--sections');
-// const imgSection1 = document.querySelector(".calculator__img--sections1")
-//
-// selectInputsSections.forEach((input) => {
-//     if (input.checked) {
-//         selectTitleSections.textContent = input.value;
-//         imgSection1.src = `../img/${input.value}.png`
-//     }
-// });
-//
-// selectTitleSections.addEventListener('click', () => {
-//     const isVisuallyHidden = selectContentSections.classList.contains("visually-hidden");
-//     if (isVisuallyHidden) {
-//         selectContentSections.classList.remove("visually-hidden");
-//         selectSections.setAttribute('data-state', 'active');
-//     } else {
-//         selectContentSections.classList.add("visually-hidden");
-//         selectSections.setAttribute('data-state', '');
-//     }
-// });
-//
-// for (let i = 0; i < selectLabelsSections.length; i++) {
-//     selectLabelsSections[i].addEventListener('click', (e) => {
-//         selectTitleSections.textContent = e.target.textContent;
-//         imgSection1.src = `img/${e.target.getAttribute("for")}.png`;
-//         selectContentSections.classList.add("visually-hidden");
-//         selectSections.setAttribute('data-state', '');
-//     });
-// }
+//CALCULATOR SECTIONS
 
 const selectSections = document.querySelectorAll('.calculator__select--sections');
 
