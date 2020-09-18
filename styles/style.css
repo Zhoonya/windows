@@ -808,6 +808,11 @@ iframe {
     margin-right: 20px;
 }
 
+.process__name {
+    display: block;
+    max-width: 230px;
+}
+
 /*CALCULATOR*/
 
 .calculator__fieldset {
