@@ -691,9 +691,11 @@ iframe {
 
 .process__button {
     padding: 15px 20px;
+    width: 70%;
 }
 
 .process__button--absolute {
+    padding: 15px 20px;
     display: block;
     position: absolute;
     top: 200px;
@@ -810,7 +812,7 @@ iframe {
 
 .process__name {
     display: block;
-    max-width: 230px;
+    /*max-width: 230px;*/
 }
 
 /*CALCULATOR*/
