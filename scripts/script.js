@@ -1,9 +1,5 @@
 "use strict";
 
-const windowWidth1 = document.querySelector('#windowWidth');
-windowWidth1.textContent = window.innerWidth;
-
-
 
 const select = document.querySelector('.calculator__select');
 const select_title = select.querySelector('.calculator__select-title');
