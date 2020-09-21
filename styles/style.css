@@ -1235,6 +1235,12 @@ iframe {
     }
 }
 
+@media screen and (max-width: 376px) {
+    .calculator__img--sections3 {
+        width: 300px;
+    }
+}
+
     /*PRESENT*/
 
 .present {
@@ -1470,17 +1476,17 @@ iframe {
     margin: 0 auto 35px;
 }
 
-@media screen and (max-width: 992px) {
-    .examples__item {
-        width: 48%;
-    }
-}
+/*@media screen and (max-width: 992px) {*/
+/*    .examples__item {*/
+/*        width: 45%;*/
+/*    }*/
+/*}*/
 
-@media screen and (max-width: 500px) {
-    .examples__item {
-        width: 98%;
-    }
-}
+/*@media screen and (max-width: 500px) {*/
+/*    .examples__item {*/
+/*        width: 95%;*/
+/*    }*/
+/*}*/
 
 
 /*REVIEWS*/
@@ -1581,7 +1587,7 @@ iframe {
 
 @media screen and (max-width: 380px) {
     .discount {
-        width: 370px;
+        width: 100%;
     }
 }
 
@@ -1649,6 +1655,19 @@ iframe {
 
 .discount__text {
     font-weight: normal;
+}
+
+@media screen and (max-width: 376px) {
+    .discount__head {
+        font-size: 11px;
+    }
+    .discount__head--middle {
+        font-size: 30px;
+    }
+
+    .discount__head--big {
+        font-size: 60px;
+    }
 }
 
 /*MEASUREMENT*/
@@ -1739,7 +1758,9 @@ iframe {
 
 @media screen and (max-width: 380px) {
     .measurement {
-        width: 370px;
+        width: 100%;
+        margin-right: 20px;
+        margin-top: 20px;
     }
 }
 

@@ -95,7 +95,6 @@ window.addEventListener("resize", () => {
 
 //SLIDER
 
-
 $('.examples__slider').slick({
     draggable: true,
     slidesToShow: 3,
