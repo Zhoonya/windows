@@ -95,80 +95,25 @@ window.addEventListener("resize", () => {
 
 //SLIDER
 
-const slider = document.querySelector(".slider");
-const sliderNext = slider.querySelector(".slider__next");
-const sliderBack = slider.querySelector(".slider__back");
-const sliderList = slider.querySelector(".slider__list");
-const sliderItems = slider.querySelectorAll(".slider__item");
-// const sliderOverflow = slider.querySelector(".slider__overflow");
 
-let windowWidth = window.innerWidth;
-let visibleElementsNumber = 0;
+$('.examples__slider').slick({
+    draggable: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    responsive: [{
+        breakpoint: 992,
+        settings: {
+            slidesToShow: 2,
+        }
 
-let sliderShift;
+    }, {
 
-if (windowWidth < 380) {
-    sliderShift = 285;
-} else if (windowWidth < 1170) {
-    sliderShift = 325;
-} else if (windowWidth >= 1170) {
-    sliderShift = 365;
-}
+        breakpoint: 500,
+        settings: {
+            slidesToShow: 1,
+        }
 
-console.log(windowWidth);
-console.log(sliderShift);
+    }],
 
-if (windowWidth < 860) {
-    visibleElementsNumber = 1;
-} else if (windowWidth < 1170) {
-    visibleElementsNumber = 2;
-} else if (windowWidth >= 1170) {
-    visibleElementsNumber = 3;
-}
-
-window.addEventListener("resize", () => {
-    windowWidth = window.innerWidth;
-    if (windowWidth < 380) {
-        sliderShift = 285;
-    } else if (windowWidth < 1170) {
-        sliderShift = 325;
-    } else if (windowWidth >= 1170) {
-        sliderShift = 365;
-    }
-
-    if (windowWidth < 860) {
-        visibleElementsNumber = 1;
-    } else if (windowWidth < 1170) {
-        visibleElementsNumber = 2;
-    } else if (windowWidth >= 1170) {
-        visibleElementsNumber = 3;
-    }
-});
-
-let currentMargin = Number(sliderList.style.marginLeft);
-
-if (currentMargin === 0) {
-    sliderBack.disabled = true;
-}
-
-sliderNext.addEventListener("click", () => {
-    currentMargin -= sliderShift;
-    sliderList.style.marginLeft = `${currentMargin}px`;
-    if (sliderBack.disabled) {
-        sliderBack.disabled = false
-    }
-    if (currentMargin <= sliderShift * -(sliderItems.length - visibleElementsNumber)) {
-        sliderNext.disabled = true;
-    }
-});
-
-sliderBack.addEventListener("click", () => {
-    currentMargin += sliderShift;
-    sliderList.style.marginLeft = `${currentMargin}px`;
-    if (sliderNext.disabled) {
-        sliderNext.disabled = false
-    }
-    if (currentMargin === 0) {
-        sliderBack.disabled = true;
-    }
 });
