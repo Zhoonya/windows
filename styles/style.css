@@ -1403,7 +1403,7 @@ iframe {
 
 @media screen and (max-width: 376px) {
     .present__item {
-        width: 340px;
+        width: 100%;
     }
 }
 
